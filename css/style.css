@@ -1,0 +1,217 @@
+/*
+    Colors:
+    blue #00C2FF
+    light b: #B6EDFF
+
+    red #FF4A4A
+*/
+
+body {
+    background-color: #fff;
+    font-family: 'Cambay', sans-serif;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    height: calc(70vw * 0.5);
+    width: 80vw;
+
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgb(146, 146, 146);
+}
+
+.container img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#img2 {
+    clip-path: polygon(0 0 , 95% 0, 95% 100%, 0 100%);
+}
+
+#slider{
+    position: relative;
+    -webkit-appearance: none;
+    width: calc( 100% + 40px);
+    height: 100%;
+    margin-left: -20px;
+    background-color: transparent;
+    outline: none;
+}
+#slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 45px;
+    width: 45px;
+    background: url("slider-icon.svg"),
+    rgba(255, 255, 255, 0.3);
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-size: contain;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px #EEE;
+}
+
+/*
+    Cards (Sections)
+*/
+.swiper-button-next, .swiper-button-prev {
+    color: #fff;
+    transition: all 500ms;
+    padding: 15px;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    text-shadow: 0 0 10px #fff;
+}
+
+.card p {
+    font-size: 20px;
+    padding: 0 10%;
+    line-height: 1.2em;
+}
+.card h2 {
+    font-size: 80px;
+    padding: 0.5em 0 0 0.5em;
+    text-shadow: 0 4px 5px #000;
+}
+.card h4 {
+    font-size: 40px;
+    padding-bottom: 0.2em;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 80px 0;
+    height: 700px;
+    box-shadow: 0 5px 15px #000;
+    color: #FFFFFF;
+}
+.g8 {
+    background-color: #00C2FF;
+}
+
+.g20 {
+    background-color: #FF4A4A;
+}
+
+.cardTitle {
+    height: 10%;
+}
+
+.cardInfo {
+    height: 50%;
+    width: 60%;
+}
+.card .swiperControlContainers {
+    width: 100%;
+    height: 100%;
+    margin: 0 30% 0 30%;
+}
+.card .swiperControlContainers .swiper-slide {
+    text-align: justify;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.cardCountrySlider {
+    height: 40%;
+}
+.card .swiperConstries {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.card .swiperConstries .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 200px;
+
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#0006);
+}
+
+
+/*
+    Footer
+*/
+footer {
+    align-items: center;
+    background-color: #B6EDFF;
+    border-top: solid #00C2FF 5px;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    width: 100%;
+}
+footer .footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    justify-content: space-evenly;
+}
+footer .people {
+    display: flex;
+}
+footer .person {
+    display: flex;
+    padding: 10px;
+    transition: all 500ms;
+}
+footer .person:hover {
+    transform: scale(1.2);
+}
+footer .person img {
+    border: solid #f5f5f5 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 50px;
+    margin-right: 5px;
+    transition: all 2s;
+}
+footer .person:active img,
+footer .person:hover img {
+    transform: rotate(360deg);
+}
+.person h4 {
+    
+}
+footer .lgETEC {
+    /*background-color: #f5f5f5;*/
+    padding: 1px 10px 1px 10px;
+    transition: all 2s;
+    margin-top: 30px;
+}
+footer .lgETEC:hover {
+    cursor: pointer;
+}
+.lgETEC img {
+    width: 80px;
+    height: auto;
+}

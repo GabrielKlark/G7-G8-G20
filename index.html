@@ -1,0 +1,318 @@
+<!-- "Site: https://dev.to/shantanu_jana/image-comparison-slider-using-html-css-and-javascript-3cff" -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Swiper js-->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="shortcut icon" href="icon_logo.ico" type="image/x-icon">
+
+    <title> G7, G8 e G20 </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <main>
+        <div class="content">
+            <div class="container">
+                <img src="assets/img/map_G20.png" alt="Mapa do Mundo G8">
+                <img id="img2" src="assets/img/map_G8.png" alt="Mapa do Mundo G7">
+                <input type="range" min="0" max="100" value="95" step="0.25" id="slider" />
+                <div class="shadowInput"></div>
+            </div>
+        </div>
+    </main>
+
+    <section class="card g8">
+        <h2 class="cardTitle">G7-8</h2>
+
+        <div class="cardInfo">
+            <!-- Swiper -->
+            <div class="swiper swiperControlContainers swiperControlContainers1">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <h4>Definição</h4>
+                    <p>
+                        G-8: a sigla é conhecida por denominar os oito países mais ricos e influentes do mundo: Estados Unidos, Japão, Alemanha, Canadá, França, Itália, Reino Unido e Rússia. Entretanto, o G-8 não reúne as oito maiores economias mundiais, já que exclui a China, que atualmente tem o segundo maior PIB do mundo.
+                    </p>
+                </div>
+                <div class="swiper-slide">
+                    <h4>Origem</h4>
+                    <p>
+                        A criação deste grupo se deu em 1975, quando o então presidente da França, Giscard d’Estaing, convidou os chefes de Estados dos países mais desenvolvidos do planeta para uma reunião nas proximidades de Paris em um castelo chamado Ramboullet.
+                        Essa primeira reunião contou com governantes de seis países: Alemanha, Estados Unidos, França, Inglaterra, Itália e Japão. Na ocasião a pauta principal foi a crise do petróleo no mundo e seus impactos que assolavam a economia mundial.
+                        Logo em 1976, houve a inserção do Canadá no grupo, totalizando 7 países, referência que deu origem à sigla G-7, naquele momento.
+                    </p>
+                </div>
+                <div class="swiper-slide">
+                    <h4>Oi e Adeus, Rússia</h4>
+                    <p>
+                        Essa configuração permaneceu até 1998, quando a Rússia integrou o grupo, formando o atual G-8.
+                        Apesar de não ter uma economia tão desenvolvida como os demais membros, a entrada da Rússia se deve ao grande poderio bélico existente em território russo e por ser a grande herdeira do poder que a União Soviética tinha nos anos anteriores. Sua adição foi uma forma de apaziguar as tensões geopolíticas que marcaram os anos da Guerra Fria, no período pós-guerra.
+                        No entanto, em 2014, a Rússia foi afastada do grupo por conta da Crise da Ucrânia e pela anexação da península da Crimeia. Segundo os países-membros da corporação, a nação russa violou a soberania nacional ucraniana, ato considerado como desrespeitoso aos interesses e normas geopolíticas do grupo.
+                    </p>
+                </div>
+                <div class="swiper-slide">
+                    <h4>Função</h4>
+                    <p>
+                        Decidir qual ou quais caminhos o mundo deve seguir, pois esses países possuem economias consolidadas e suas forças políticas exercem grande influência nas instituições e organizações mundiais, como ONU, FMI, OMC. A discussão gira em torno do processo de globalização, abertura de mercados, problemas ambientais, ajudas financeiras para economias em crise, entre outros.
+                    </p>
+                </div>
+                <div class="swiper-slide">
+                    <h4>Hipocrisia</h4>
+                    <p>
+                        Segundo líderes do grupo, as discussões propostas nas reuniões têm por finalidade diminuir as disparidades entre as economias dos países subdesenvolvidos. Embora na prática não seja assim, pois fica claro que as decisões tomadas servem para atender os interesses internos dos entes do grupo, um exemplo convincente está vinculado à abordagem ecológica, muitas vezes os países do G-7 não se comprometem a assinar acordos ambientais, tendo em vista que são os que mais provocam tais problemas.
+                        Ou seja, apesar do discurso homogêneo dos países membros, fica claro o protecionismo de cada participante.
+                    </p>
+                </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            </div>
+
+            <!-- Initialize Swiper -->
+            <script type="module">
+                var swiperControlContainers1 = new Swiper('.swiperControlContainers1', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: true,
+                },
+                });
+            </script>
+        </div>
+
+        <div class="cardCountrySlider">
+            <!-- Swiper -->
+            <div class="swiper swiperConstries swiperConstries1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_usa.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_japan.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_germany.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_canada.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_france.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_italy.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_unitedKingdom.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_russia.png)"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-paginationConstries swiper-paginationConstries1"></div>
+            </div>
+
+            <!-- Initialize Swiper -->
+            <script type="module">
+                var swiperConstries1 = new Swiper('.swiperConstries1', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 25,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: '.swiper-paginationCountries1',
+                },
+                loop: true,
+                autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false,
+                },
+                });
+            </script>
+        </div>
+    </section>
+
+    <section class="card g20">
+        <h2 class="cardTitle">G7-8</h2>
+
+        <div class="cardInfo">
+            <!-- Swiper -->
+            <div class="swiper swiperControlContainers swiperControlContainers2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h4>Definição</h4>
+                        <p>
+                            O G-20 e a cúpula mais poderosa do planeta.<br>
+                            Os países que fazem parte do G-20 são: Argentina, Austrália, Brasil, Canadá, China, França, Alemanha, Índia, Indonésia, Itália, Japão, Coreia do Sul, México, Rússia, Arábia Saudita, África do Sul, Turquia, Reino Unido, Estados Unidos e a União Europeia. Esses países representam os países que movimentam 80% do comercio global.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h4>Origem</h4>
+                        <p>
+                            Foi criado no ano de 1999, após as crises financeiras da década de 90, como um substituto do G-33, grupo que estava substituindo o G-22. Os 8 países do G-8 se juntaram com 11 países emergentes de grande influência econômica e 1 representante da União Europeia.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h4>Função</h4>
+                        <p>
+                            O G-20 foi proposto como um novo fórum para a cooperação e consulta nas matérias pertinentes ao sistema financeiro internacional. Ele serve para administrar grandes problemas relacionados a economia global, como exemplos: estabilidade financeira internacional, mitigação da mudança de clima e desenvolvimento sustentável.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h4>Presidência</h4>
+                        <p>
+                            A presidência do G-20 rotaciona todos os anos entre seus membros. Isso é, o país que está na presidência atualmente trabalha com seu sucessor e antecessor, eles juntos se chamam Troika, isso acontece para se assegurar da continuidade da agenda. Atualmente (2022) Itália, Indonésia e Índia são os países de Troika.
+                        </p>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <!-- Initialize Swiper -->
+            <script type="module">
+                var swiperControlContainers2 = new Swiper('.swiperControlContainers2', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: true,
+                },
+                });
+            </script>
+        </div>
+
+        <div class="cardCountrySlider">
+            <!-- Swiper -->
+            <div class="swiper swiperConstries swiperConstries2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_usa.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_japan.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_germany.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_canada.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_france.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_italy.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_unitedKingdom.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_russia.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_argentina.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_australia.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_brazil.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_china.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_india.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_indonesia.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_southkorea.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_mexico.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_saudiArabia.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_southAfrica.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_turquia.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(assets/img/flags/img_flag_europeanUnion.png)"></div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-paginationConstries swiper-paginationConstries2"></div>
+            </div>
+
+            <!-- Initialize Swiper -->
+            <script type="module">
+                var swiperConstries2 = new Swiper('.swiperConstries2', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 25,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: '.swiper-paginationCountries2',
+                },
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                });
+            </script>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="people">
+                <div class="person">
+                    <a target="_blank" href="https://www.instagram.com/alic_primo/">
+                        <img src="assets/img/pLyce.png" alt="Alice Primo">
+                    </a>
+                    <div>
+                        <h2>Alice Primo</h2>
+                        <h4>RM:20012</h4>
+                    </div>
+                </div>
+                <div class="person">
+                    <a target="_blank" href="https://www.instagram.com/gabrielzklark/">
+                        <img src="assets/img/pGaab.png" alt="Gabriel Vinícius">
+                    </a>
+                    <div>
+                        <h2>Gabriel Vinícius</h2>
+                        <h4>RM:20143</h4>
+                    </div>
+                </div>
+                <div class="person">
+                    <a target="_blank" href="https://www.instagram.com/letzzw/">
+                        <img src="assets/img/pLet.jpg" alt="Matheus Garcia">
+                    </a>
+                    <div>
+                        <h2>Leticia Regis</h2>
+                        <h4>RM:20008</h4>
+                    </div>
+                </div>
+                <div class="person">
+                    <a target="_blank" href="https://www.instagram.com/moon_m0vie/">
+                        <img src="assets/img/pMari.jpg" alt="Rafaela Araújo">
+                    </a>
+                    <div>
+                        <h2>Mariana Heissig</h2>
+                        <h4>RM:20065</h4>
+                    </div>
+                </div>
+                <div class="person">
+                    <a target="_blank" href="https://twitter.com/Juuunn31">
+                        <img src="assets/img/pMar.jpg" alt="Rafaela Araújo">
+                    </a>
+                    <div>
+                        <h2>Marcelo Oliveira</h2>
+                        <h4>RM:20091</h4>
+                    </div>
+                </div>
+            </div>
+            <a class="lgETEC" target="_blank" href="https://www.etecguarulhos.com.br/">
+                <img src="assets/img/logo_etec_gru.png" alt="ETEC Guarulhos" title="ETEC GRU">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
